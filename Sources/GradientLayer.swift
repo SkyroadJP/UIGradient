@@ -8,7 +8,7 @@
 
 import UIKit
 
-public enum GradientDirection {
+@objc public enum GradientDirection: Int {
     case topToBottom
     case bottomToTop
     case leftToRight
@@ -17,14 +17,14 @@ public enum GradientDirection {
     case topRightToBottomLeft
     case bottomLeftToTopRight
     case bottomRightToTopLeft
-    case custom(Int)
+    // case custom(Int)
 }
 
-open class GradientLayer: CAGradientLayer {
+@objc open class GradientLayer: CAGradientLayer {
 
     private var direction: GradientDirection = .bottomLeftToTopRight
 
-    public init(direction: GradientDirection, colors: [UIColor], cornerRadius: CGFloat = 0, locations: [Double]? = nil) {
+    @objc public init(direction: GradientDirection, colors: [UIColor], cornerRadius: CGFloat = 0, locations: [Double]? = nil) {
         super.init()
         self.direction = direction
         self.needsDisplayOnBoundsChange = true
@@ -52,100 +52,100 @@ open class GradientLayer: CAGradientLayer {
     }
 }
 
-public extension GradientLayer {
-    static var oceanBlue: GradientLayer {
+@objc public extension GradientLayer {
+    @objc static var oceanBlue: GradientLayer {
         return GradientLayer(direction: .bottomLeftToTopRight, colors: [UIColor.hex("2E3192"), UIColor.hex("1BFFFF")])
     }
     
-    static var sanguine: GradientLayer {
+    @objc static var sanguine: GradientLayer {
         return GradientLayer(direction: .bottomLeftToTopRight , colors: [UIColor.hex("D4145A"), UIColor.hex("FBB03B")])
     }
     
-    static var lusciousLime: GradientLayer {
+    @objc static var lusciousLime: GradientLayer {
         return GradientLayer(direction: .bottomLeftToTopRight , colors: [UIColor.hex("009245"), UIColor.hex("FCEE21")])
     }
     
-    static var purpleLake: GradientLayer {
+    @objc static var purpleLake: GradientLayer {
         return GradientLayer(direction: .bottomLeftToTopRight , colors: [UIColor.hex("662D8C"), UIColor.hex("ED1E79")])
     }
     
-    static var freshPapaya: GradientLayer {
+    @objc static var freshPapaya: GradientLayer {
         return GradientLayer(direction: .bottomLeftToTopRight , colors: [UIColor.hex("ED1C24"), UIColor.hex("FCEE21")])
     }
     
-    static var ultramarine: GradientLayer {
+    @objc static var ultramarine: GradientLayer {
         return GradientLayer(direction: .bottomLeftToTopRight , colors: [UIColor.hex("00A8C5"), UIColor.hex("FFFF7E")])
     }
     
-    static var pinkSugar: GradientLayer {
+    @objc static var pinkSugar: GradientLayer {
         return GradientLayer(direction: .bottomLeftToTopRight , colors: [UIColor.hex("D74177"), UIColor.hex("FFE98A")])
     }
     
-    static var lemonDrizzle: GradientLayer {
+    @objc static var lemonDrizzle: GradientLayer {
         return GradientLayer(direction: .bottomLeftToTopRight , colors: [UIColor.hex("FB872B"), UIColor.hex("D9E021")])
     }
     
-    static var victoriaPurple: GradientLayer {
+    @objc static var victoriaPurple: GradientLayer {
         return GradientLayer(direction: .bottomLeftToTopRight , colors: [UIColor.hex("312A6C"), UIColor.hex("852D91")])
     }
     
-    static var springGreens: GradientLayer {
+    @objc static var springGreens: GradientLayer {
         return GradientLayer(direction: .bottomLeftToTopRight , colors: [UIColor.hex("009E00"), UIColor.hex("FFFF96")])
     }
     
-    static var mysticMauve: GradientLayer {
+    @objc static var mysticMauve: GradientLayer {
         return GradientLayer(direction: .bottomLeftToTopRight , colors: [UIColor.hex("B066FE"), UIColor.hex("63E2FF")])
     }
     
-    static var reflexSilver: GradientLayer {
+    @objc static var reflexSilver: GradientLayer {
         return GradientLayer(direction: .bottomLeftToTopRight , colors: [UIColor.hex("808080"), UIColor.hex("E6E6E6")])
     }
     
-    static var neonGlow: GradientLayer {
+    @objc static var neonGlow: GradientLayer {
         return GradientLayer(direction: .bottomLeftToTopRight , colors: [UIColor.hex("00FFA1"), UIColor.hex("00FFFF")])
     }
     
-    static var berrySmoothie: GradientLayer {
+    @objc static var berrySmoothie: GradientLayer {
         return GradientLayer(direction: .bottomLeftToTopRight , colors: [UIColor.hex("8E78FF"), UIColor.hex("FC7D7B")])
     }
     
-    static var newLeaf: GradientLayer {
+    @objc static var newLeaf: GradientLayer {
         return GradientLayer(direction: .bottomLeftToTopRight , colors: [UIColor.hex("00537E"), UIColor.hex("3AA17E")])
     }
     
-    static var cottonCandy: GradientLayer {
+    @objc static var cottonCandy: GradientLayer {
         return GradientLayer(direction: .bottomLeftToTopRight , colors: [UIColor.hex("FCA5F1"), UIColor.hex("B5FFFF")])
     }
     
-    static var pixieDust: GradientLayer {
+    @objc static var pixieDust: GradientLayer {
         return GradientLayer(direction: .bottomLeftToTopRight , colors: [UIColor.hex("D585FF"), UIColor.hex("00FFEE")])
     }
     
-    static var fizzyPeach: GradientLayer {
+    @objc static var fizzyPeach: GradientLayer {
         return GradientLayer(direction: .bottomLeftToTopRight , colors: [UIColor.hex("F24645"), UIColor.hex("EBC08D")])
     }
     
-    static var sweetDream: GradientLayer {
+    @objc static var sweetDream: GradientLayer {
         return GradientLayer(direction: .bottomLeftToTopRight , colors: [UIColor.hex("3A3897"), UIColor.hex("A3A1FF")])
     }
     
-    static var firebrick: GradientLayer {
+    @objc static var firebrick: GradientLayer {
         return GradientLayer(direction: .bottomLeftToTopRight , colors: [UIColor.hex("45145A"), UIColor.hex("FF5300")])
     }
     
-    static var wroughtIron: GradientLayer {
+    @objc static var wroughtIron: GradientLayer {
         return GradientLayer(direction: .bottomLeftToTopRight , colors: [UIColor.hex("333333"), UIColor.hex("5A5454")])
     }
     
-    static var deepSea: GradientLayer {
+    @objc static var deepSea: GradientLayer {
         return GradientLayer(direction: .bottomLeftToTopRight , colors: [UIColor.hex("4F00BC"), UIColor.hex("29ABE2")])
     }
     
-    static var coastalBreeze: GradientLayer {
+    @objc static var coastalBreeze: GradientLayer {
         return GradientLayer(direction: .bottomLeftToTopRight , colors: [UIColor.hex("00B7FF"), UIColor.hex("FFFFC7")])
     }
     
-    static var eveningDelight: GradientLayer {
+    @objc static var eveningDelight: GradientLayer {
         return GradientLayer(direction: .bottomLeftToTopRight , colors: [UIColor.hex("93278F"), UIColor.hex("00A99D")])
     }
 }

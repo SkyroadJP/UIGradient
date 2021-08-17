@@ -58,7 +58,7 @@ class ViewController: UIViewController {
             GradientPattern(name: "Deep Sea", fromColors: ["4F00BC", "29ABE2"], gradient: GradientLayer.deepSea),
             GradientPattern(name: "Coastal Breeze", fromColors: ["00B7FF", "FFFFC7"], gradient: GradientLayer.coastalBreeze),
             GradientPattern(name: "Evening Delight", fromColors: ["93278F", "00A99D"], gradient: GradientLayer.eveningDelight),
-            GradientPattern(name: "Argon", fromColors: ["03001e", "7303c0", "ec38bc", "fdeff9"], gradient: GradientLayer(direction: .custom(77), colors: [UIColor.hex("03001e"), UIColor.hex("7303c0"), UIColor.hex("ec38bc"), UIColor.hex("fdeff9")], locations: [0.0, 0.33, 0.66, 1.0]))
+//            GradientPattern(name: "Argon", fromColors: ["03001e", "7303c0", "ec38bc", "fdeff9"], gradient: GradientLayer(direction: .custom(77), colors: [UIColor.hex("03001e"), UIColor.hex("7303c0"), UIColor.hex("ec38bc"), UIColor.hex("fdeff9")], locations: [0.0, 0.33, 0.66, 1.0]))
         ]
     }
     

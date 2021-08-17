@@ -8,8 +8,7 @@
 
 import UIKit
 
-open class UIGradientHelper {
-    
+class UIGradientHelper {
     public static func getStartAndEndPointsOf(_ gradientDirection: GradientDirection) -> (startPoint: CGPoint, endPoint: CGPoint) {
         switch gradientDirection {
         case .topToBottom:
@@ -28,12 +27,12 @@ open class UIGradientHelper {
             return (CGPoint(x: 0.0, y: 1.0), CGPoint(x: 1.0, y: 0.0))
         case .bottomRightToTopLeft:
             return (CGPoint(x: 1.0, y: 1.0), CGPoint(x: 0.0, y: 0.0))
-        case .custom(let angle):
-            return startAndEndPoints(from: angle)
+//        case .custom(let angle):
+//            return startAndEndPoints(from: angle)
         }
     }
 
-    public static func startAndEndPoints(from angle: Int) -> (startPoint:CGPoint, endPoint:CGPoint) {
+    static func startAndEndPoints(from angle: Int) -> (startPoint:CGPoint, endPoint:CGPoint) {
         // Set default points for angle of 0°
         var startPointX: CGFloat = 0.5
         var startPointY: CGFloat = 1.0
@@ -93,14 +92,12 @@ open class UIGradientHelper {
 }
 
 extension Int {
-
     func degreesToRads() -> Double {
         return (Double(self) * .pi / 180)
     }
 }
 
 extension CGPoint {
-
     func opposite() -> CGPoint {
         // Create New Point
         var oppositePoint = CGPoint()
